@@ -1625,47 +1625,66 @@ body {
   -webkit-transition-delay: 0.16s;
   transition-delay: 0.16s;
 }
-
-.circle {
-  font-size: 10px;
-  width: 16%;
-  height: 140px;
-  margin: 10px;
-  display: flex;
-  border-radius: 50%;
-  border: 1px solid #353b48;
-  position: relative;
-}
-.mbti-ei {
-  background: conic-gradient(#1fae91 277deg, #d0d2d1 0deg);
-}
-.mbti-ns {
-  background: conic-gradient(#d89737 277deg, #d0d2d1 0deg);
-}
-.mbti-tf {
-  background: conic-gradient(#6cce45 277deg, #d0d2d1 0deg);
-}
-.mbti-pj {
-  background: conic-gradient(#bc83c7 277deg, #d0d2d1 0deg);
-}
-.inner-circle {
-  width: 90%;
-  height: 90%;
-  border-radius: inherit;
+.progress-bar {
+  align-content: center;
+  width: 80%;
+  height: 35px;
   background-color: black;
-  margin: auto;
-  display: flex;
-  color: white;
-  justify-content: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: 2.5px solid #a8a8a8;
 }
 
-.inner-circle span {
-  display: flex;
-  align-items: center;
+.progress-bar .progress {
+  height: 75%;
+  border: 5px solid black;
+  padding: 0;
+  text-align: center;
+  color: #111;
+  border-radius: 20px 0 0 20px;
 }
-.progress-wrap {
-  display: flex;
+
+.progress-bar .ei {
+  background-color: #1fae91;
 }
-.mbti-font {
+.progress-bar .ns {
+  background-color: #d89737;
+}
+.progress-bar .tf {
+  background-color: #6cce45;
+}
+.progress-bar .pj {
+  background-color: #bc83c7;
+}
+
+.progress > span {
   font-size: 18px;
+}
+
+.label {
+  font-size: 30px;
+  padding-bottom: 30px;
+  color: #d3d3d3;
+}
+
+.label span {
+  font-size: 15px;
+}
+
+.fourco {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: left;
+}
+
+.introbtn {
+  margin-bottom: 30px;
+}
+
+.fourco > a {
+  text-decoration: none;
+  color: white;
 }
