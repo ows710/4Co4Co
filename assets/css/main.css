@@ -1626,43 +1626,47 @@ body {
   transition-delay: 0.16s;
 }
 .progress-bar {
+  align-content: center;
   width: 80%;
-  height: 40px;
-  background-color: #dedede;
+  height: 35px;
+  background-color: black;
   font-weight: 600;
   font-size: 0.8rem;
   border-radius: 20px;
   margin-bottom: 10px;
+  border: 2.5px solid #a8a8a8;
 }
 
 .progress-bar .progress {
-  height: 40px;
+  height: 75%;
+  border: 5px solid black;
   padding: 0;
   text-align: center;
-  background-color: #4f98ff;
   color: #111;
   border-radius: 20px 0 0 20px;
 }
 
-.seungmin-ei {
-  width: 64%;
+.progress-bar .ei {
+  background-color: #1fae91;
+}
+.progress-bar .ns {
+  background-color: #d89737;
+}
+.progress-bar .tf {
+  background-color: #6cce45;
+}
+.progress-bar .pj {
+  background-color: #bc83c7;
 }
 
-.seungmin-ns {
-  width: 65%;
-}
-
-.seungmin-tf {
-  width: 60%;
-}
-
-.seungmin-pj {
-  width: 61%;
+.progress > span {
+  font-size: 18px;
 }
 
 .label {
   font-size: 30px;
   padding-bottom: 30px;
+  color: #d3d3d3;
 }
 
 .label span {
