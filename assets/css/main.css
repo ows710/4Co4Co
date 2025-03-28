@@ -1672,3 +1672,19 @@ body {
 .label span {
   font-size: 15px;
 }
+
+.fourco {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: left;
+}
+
+.introbtn {
+  margin-bottom: 30px;
+}
+
+.fourco > a {
+  text-decoration: none;
+  color: white;
+}
