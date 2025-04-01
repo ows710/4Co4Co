@@ -77,7 +77,7 @@
                       </svg>
                       <span class="btn-background"></span>
                     </button>
-                    <img src="assets/img/seungmin.png" alt="Welcome" />
+                    <img src="assets/img/logo.png" alt="Welcome" />
                   </div>
                   <div class="intro--options">
                     <a href="#0">
@@ -473,24 +473,23 @@
                 </div>
               </li>
               <li class="l-section section">
-                <div class="contact">
-                  <div class="contact--lockup">
-                    <div class="modal">
-                      <div class="dashboard">
-                        <h2>📌 위젯 대시보드</h2>
-                        <div class="widget-container">
-                          <div class="widget" draggable="true">📅 일정</div>
-                          <div class="widget" draggable="true">📊 통계</div>
-                          <div class="widget" draggable="true">📰 뉴스</div>
-                          <div class="widget" draggable="true">💬 메시지</div>
-                        </div>
-                        <div class="drop-area" id="dropArea">
-                          🔽 여기에 드래그
-                        </div>
-                        <div class="delete-area" id="deleteArea">🗑️ 삭제</div>
-                      </div>
-                    </div>
+                <div class="game-container">
+                  <h1>JavaScript 개념 정복하기</h1>
+
+                  <div id="problemContainer">
+                    <!-- 문제 내용은 자바스크립트로 추가됩니다 -->
                   </div>
+
+                  <button onclick="checkSolution()">확인</button>
+                  <div class="result" id="result"></div>
+                  <button
+                    id="nextButton"
+                    class="next-btn"
+                    onclick="nextProblem()"
+                    disabled
+                  >
+                    다음 문제로 넘어가기
+                  </button>
                 </div>
               </li>
             </ul>
