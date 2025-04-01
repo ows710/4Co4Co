@@ -846,6 +846,7 @@ body {
   margin: 0 auto;
 }
 .work--lockup .slider--item-image {
+  position: relative;
   width: 150px;
   height: 150px;
   margin: 0 auto;
