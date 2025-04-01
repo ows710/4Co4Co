@@ -1216,6 +1216,7 @@
         $(".outer-nav").children().eq(t).addClass("is-active");
     }
     function i(t, e, i) {
+
       let currentSong = $(".slider--item").index($(".slider--item-center"));
       console.log($(".song").eq(currentSong)[0]);
 
@@ -1238,7 +1239,6 @@
           .toArray()
           .forEach((e) => e.pause());
       }
-
       $(".main-content").children().removeClass("section--is-active"),
         $(".main-content").children().eq(e).addClass("section--is-active"),
         $(".main-content .section")
