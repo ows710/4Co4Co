@@ -1216,9 +1216,7 @@
         $(".outer-nav").children().eq(t).addClass("is-active");
     }
     function i(t, e, i) {
-
       let currentSong = $(".slider--item").index($(".slider--item-center"));
-      console.log($(".song").eq(currentSong)[0]);
 
       if (e + 1 === 3) {
         $(".ctrlIcon").addClass("fa-pause");
