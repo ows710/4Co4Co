@@ -1216,6 +1216,29 @@
         $(".outer-nav").children().eq(t).addClass("is-active");
     }
     function i(t, e, i) {
+
+      let currentSong = $(".slider--item").index($(".slider--item-center"));
+      console.log($(".song").eq(currentSong)[0]);
+
+      if (e + 1 === 3) {
+        $(".ctrlIcon").addClass("fa-pause");
+        $(".ctrlIcon").removeClass("fa-play");
+        $(".song")
+          .toArray()
+          .forEach((e) => (e.currentTime = 0));
+        $(".song")
+          .eq(currentSong)[0]
+          .play()
+          .catch((error) => {
+            console.error("Playback failed:", error);
+          });
+        $(".slider--item").find("img")[currentSong].style.animation =
+          "rotate 10s linear infinite";
+      } else {
+        $(".song")
+          .toArray()
+          .forEach((e) => e.pause());
+      }
       $(".main-content").children().removeClass("section--is-active"),
         $(".main-content").children().eq(e).addClass("section--is-active"),
         $(".main-content .section")
