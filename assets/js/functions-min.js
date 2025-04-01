@@ -1225,8 +1225,13 @@
         $(".song")
           .toArray()
           .forEach((e) => (e.currentTime = 0));
-        $(".song").eq(currentSong)[0].play();
-        $(".slider--item").find("img")[1].style.animation =
+        $(".song")
+          .eq(currentSong)[0]
+          .play()
+          .catch((error) => {
+            console.error("Playback failed:", error);
+          });
+        $(".slider--item").find("img")[currentSong].style.animation =
           "rotate 10s linear infinite";
       } else {
         $(".song")
