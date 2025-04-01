@@ -36,5 +36,3 @@ config.codekit3
 ### Sass ###
 .sass-cache/
 *.css.map
-
-*.mp3
