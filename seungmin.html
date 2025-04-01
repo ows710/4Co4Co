@@ -9,6 +9,11 @@
     <meta name="keywords" content="global, template, html, sass, jquery" />
     <meta name="author" content="Bucky Maler" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/dain.css" />
+    <script
+      src="https://kit.fontawesome.com/f4cec5df28.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- notification for small viewports and landscape oriented smartphones -->
@@ -286,45 +291,56 @@
                         <a href="#0">
                           <div class="slider--item-image">
                             <img
-                              src="assets/img/work-victory.jpg"
-                              alt="Victory"
+                              src="assets/img/Better and better.png"
+                              alt="better and better"
                             />
+                            <div class="slider--item-image controls hidden">
+                              <div>
+                                <i class="fa-solid fa-play ctrlIcon"></i>
+                              </div>
+                            </div>
                           </div>
-                          <p class="slider--item-title">Victory</p>
-                          <p class="slider--item-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit sed do.
-                          </p>
+                          <p class="slider--item-title">Better and better</p>
+                          <p class="slider--item-description">wooz</p>
+                          <audio class="slider--item-description song">
+                            <source src="assets/mp3/Better and better.mp3" />
+                          </audio>
                         </a>
                       </li>
                       <li class="slider--item slider--item-center">
                         <a href="#0">
                           <div class="slider--item-image">
-                            <img
-                              src="assets/img/work-metiew-smith.jpg"
-                              alt="Metiew and Smith"
-                            />
+                            <img src="assets/img/cupid.jpg" alt="cupid" />
+                            <div class="slider--item-image controls">
+                              <div>
+                                <i class="ctrlIcon fa-solid fa-play"></i>
+                              </div>
+                            </div>
                           </div>
-                          <p class="slider--item-title">Metiew &amp; Smith</p>
-                          <p class="slider--item-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit sed do.
-                          </p>
+                          <p class="slider--item-title">Cupid</p>
+                          <p class="slider--item-description">Ph-1</p>
+                          <audio class="slider--item-description song">
+                            <source
+                              src="assets/mp3/pH 1 Cupid Feat.PENOMECO MV.mp3"
+                            />
+                          </audio>
                         </a>
                       </li>
                       <li class="slider--item slider--item-right">
                         <a href="#0">
                           <div class="slider--item-image">
-                            <img
-                              src="assets/img/work-alex-nowak.jpg"
-                              alt="Alex Nowak"
-                            />
+                            <img src="assets/img/muhee.jpg" alt="muhee" />
+                            <div class="slider--item-image controls hidden">
+                              <div>
+                                <i class="ctrlIcon fa-solid fa-play"></i>
+                              </div>
+                            </div>
                           </div>
-                          <p class="slider--item-title">Alex Nowak</p>
-                          <p class="slider--item-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit sed do.
-                          </p>
+                          <p class="slider--item-title">odoriko</p>
+                          <p class="slider--item-description">Vaundy</p>
+                          <audio class="slider--item-description song">
+                            <source src="assets/mp3/oord.mp3" />
+                          </audio>
                         </a>
                       </li>
                     </ul>
@@ -440,7 +456,7 @@
         <li>Canvas</li>
       </ul>
     </div>
-
+    <script src="assets/js/dain.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
       window.jQuery ||
@@ -448,6 +464,6 @@
           '<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>'
         );
     </script>
-    <script src="assets/js/functions-min.js"></script>
+    <script src="assets/js/functions-min.js" type="module"></script>
   </body>
 </html>
