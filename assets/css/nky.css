@@ -1872,13 +1872,14 @@
   
   #map {
     margin: auto;
-    margin-top: 10%;
+    margin-top: 15%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 70%;
     height: 500px;
+    
   }
   
   .map-buttons {
