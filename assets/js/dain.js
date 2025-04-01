@@ -26,6 +26,7 @@ function audioPlay(song) {
   ctrlIconList[song].classList.remove("fa-play");
 
   img[song].style.animation = "rotate 10s linear infinite";
+  console.log(img[song]);
 }
 
 //오디오 멈춤
@@ -33,7 +34,6 @@ function audioStop(song) {
   songList[song].pause();
   ctrlIconList[song].classList.remove("fa-pause");
   ctrlIconList[song].classList.add("fa-play");
-
   img[song].style.animationPlayState = "paused";
 }
 
