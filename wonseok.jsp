@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,7 +50,7 @@
                 <li><span>My Skills</span></li>
                 <li><span>Top3 Music</span></li>
                 <li><span>MBTI</span></li>
-                <li><span>Drag & Drop</span></li>
+                <li><span>Task</span></li>
               </ul>
             </nav>
             <ul class="l-main-content main-content">
@@ -507,13 +509,7 @@
           </div>
         </div>
       </div>
-      <ul class="outer-nav">
-        <li class="is-active">Home</li>
-        <li>My Skills</li>
-        <li>Top3 Music</li>
-        <li>My MBTI</li>
-        <li>DnD</li>
-      </ul>
+      <jsp:include page="/assets/comm/outer-nav.jsp"></jsp:include>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

@@ -1,3 +1,8 @@
+/**
+ * Description placeholder
+ *
+ * @type {{}}
+ */
 const problems = [
   {
     question: "자바스크립트 코드 실행 과정 (호이스팅 포함)",
@@ -76,7 +81,17 @@ const problems = [
   },
 ];
 
+/**
+ * Description placeholder
+ *
+ * @type {number}
+ */
 let currentProblemIndex = 0;
+/**
+ * Description placeholder
+ *
+ * @type {*}
+ */
 let draggedItem = null;
 
 function loadProblem(problemIndex) {
@@ -113,10 +128,20 @@ function loadProblem(problemIndex) {
   document.getElementById("nextButton").disabled = true;
 }
 
+/**
+ * Description placeholder
+ *
+ * @param {*} event
+ */
 function allowDrop(event) {
   event.preventDefault();
 }
 
+/**
+ * Description placeholder
+ *
+ * @param {*} event
+ */
 function drop(event) {
   event.preventDefault();
   if (draggedItem && event.target.classList.contains("target-area")) {
@@ -124,6 +149,7 @@ function drop(event) {
   }
 }
 
+/** Description placeholder */
 function checkSolution() {
   const targetArea = document.getElementById("targetArea");
 
@@ -143,6 +169,7 @@ function checkSolution() {
   }
 }
 
+/** Description placeholder */
 function nextProblem() {
   currentProblemIndex++;
 
