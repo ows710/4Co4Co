@@ -36,15 +36,7 @@ pageEncoding="UTF-8"%>
         <div id="viewport" class="l-viewport">
           <div class="l-wrapper">
             <jsp:include page="/comm/header.jsp" />
-            <nav class="l-side-nav">
-              <ul class="side-nav">
-                <li class="is-active"><span>Home</span></li>
-                <li><span>My Skills</span></li>
-                <li><span>Favorite Music</span></li>
-                <li><span>MBTI</span></li>
-                <li><span>Hire us</span></li>
-              </ul>
-            </nav>
+            <jsp:include page="/comm/leftSideNav.jsp"></jsp:include>
             <!-- 첫번째 부분 -->
             <ul class="l-main-content main-content">
               <li class="l-section section section--is-active">
@@ -295,7 +287,7 @@ pageEncoding="UTF-8"%>
                 <div class="about">
                   <div style="height: 200px" class="about--banner">
                     <h2 style="font-size: 100px">
-                      ISTP
+                      INFP
                       <br />
                     </h2>
                   </div>
@@ -393,13 +385,7 @@ pageEncoding="UTF-8"%>
           </div>
         </div>
       </div>
-      <ul class="outer-nav">
-        <li class="is-active">Home</li>
-        <li>My Skills</li>
-        <li>My Favorite Music</li>
-        <li>My MBTI</li>
-        <li>Hire us</li>
-      </ul>
+      <jsp:include page="/comm/outer-nav.jsp"></jsp:include>
     </div>
     <script src="assets/js/dain.js"></script>
     <script src="assets/js/video.js"></script>
