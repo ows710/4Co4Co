@@ -844,85 +844,18 @@ body {
   display: none;
   max-width: 250px;
   margin: 0 auto;
-  font-size: 14px;
-  color: #444;
-  text-align: center;
 }
-
-.work--lockup .slider--item-description audio {
-  width: 100%;
-  margin-top: 5px;
-}
-
-.custom-audio-player {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #282828;
-  padding: 10px;
-  border-radius: 10px;
-  width: 100%;
-}
-
-.play-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.seek-bar {
-  flex-grow: 1;
-  margin: 0 10px;
-}
-
-.current-time,
-.total-time {
-  color: white;
-  font-size: 12px;
-}
-
-/* 기존 이미지 스타일을 유지하면서, 오디오 아이콘을 추가 */
 .work--lockup .slider--item-image {
-  position: relative; /* 아이콘을 이미지에 오버레이하기 위해 상대적인 위치 설정 */
+  position: relative;
   width: 150px;
   height: 150px;
   margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
 }
-
 .work--lockup .slider--item-image img {
   width: 100%;
 }
-
-/* 중앙에 재생/멈춤 아이콘을 설정 */
-.work--lockup .slider--item-image .play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-  border-radius: 50%;
-  opacity: 0.8;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-/* 아이콘이 이미지 위에 hover 되었을 때 더 선명하게 보이도록 설정 */
-.work--lockup .slider--item-image:hover .play-icon {
-  opacity: 1;
-}
-
-/* 오디오 버튼에 관련된 스타일 */
 .work--lockup .slider--item-left {
   top: 50%;
   left: 0;
@@ -930,7 +863,6 @@ body {
   transform: translateY(-50%);
   display: block;
 }
-
 .work--lockup .slider--item-right {
   top: 50%;
   right: 0;
@@ -938,7 +870,6 @@ body {
   transform: translateY(-50%);
   display: block;
 }
-
 .work--lockup .slider--item-center {
   position: relative;
   top: 30px;
@@ -947,26 +878,20 @@ body {
   transform: translateX(-50%);
   display: block;
 }
-
 .work--lockup .slider--item-center a {
   color: #fff;
 }
-
 .work--lockup .slider--item-center .slider--item-title {
   margin-top: 25px;
   font-size: 16px;
 }
-
 .work--lockup .slider--item-center .slider--item-description {
   display: block;
 }
-
 .work--lockup .slider--item-center .slider--item-image {
   width: 300px;
   height: 300px;
 }
-
-/* 네비게이션 버튼 */
 .work--lockup .slider--next,
 .work--lockup .slider--prev {
   position: absolute;
@@ -989,71 +914,57 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
-
 .work--lockup .slider--next svg,
 .work--lockup .slider--prev svg {
   width: 20px;
   fill: #fff;
 }
-
 .work--lockup .slider--next {
   right: 0;
 }
-
 .work--lockup .slider--prev {
   left: 0;
 }
-
-/* 모바일 스타일 조정 */
 @media (max-width: 900px) {
   .work--lockup .slider--item-image {
     width: 120px;
     height: 120px;
   }
-
   .work--lockup .slider--item-center .slider--item-image {
     width: 240px;
     height: 240px;
   }
-
   .work--lockup .slider--next,
   .work--lockup .slider--prev {
     top: 130px;
   }
 }
-
 @media (max-width: 767px) {
   .work--lockup .slider {
     width: 75%;
   }
-
   .work--lockup .slider--item-image {
     width: 90px;
     height: 90px;
   }
-
   .work--lockup .slider--item-center .slider--item-image {
     width: 190px;
     height: 190px;
   }
-
   .work--lockup .slider--next,
   .work--lockup .slider--prev {
     top: 105px;
   }
 }
-
 @media (max-width: 600px) {
   .work--lockup .slider {
     width: auto;
   }
-
   .work--lockup .slider--item-left,
   .work--lockup .slider--item-right {
     display: none;
   }
 }
-
 .about {
   position: relative;
   display: -webkit-box;
@@ -1265,10 +1176,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-image: url("../img/contact-visual.png");
+  background-image: url("../img/contact-visual.png");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
 }
 .contact--lockup {
   position: relative;
@@ -1425,9 +1336,7 @@ body {
   align-items: center;
   margin: 30px 0;
 }
-.work-request--options .options-a,
-.work-request--options .options-b,
-.work-request--options .options-c {
+.work-request--options .options-a {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1438,7 +1347,7 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-/* .work-request--options .options-b {
+.work-request--options .options-b {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1450,7 +1359,7 @@ body {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-} */
+}
 .work-request--options label {
   display: block;
   width: 200px;
@@ -1542,8 +1451,7 @@ body {
     justify-content: space-around;
   }
   .work-request--options .options-a,
-  .work-request--options .options-b,
-  .work-request--options .options-c {
+  .work-request--options .options-b {
     display: block;
     width: auto;
   }
@@ -1719,39 +1627,52 @@ body {
   transition-delay: 0.16s;
 }
 
-.mbti-progress {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* 요소 간 간격 */
-  width: 100%;
+.progress-bar {
+  align-content: center;
+  width: 80%;
+  height: 35px;
+  background-color: black;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: 2.5px solid #a8a8a8;
 }
 
-.mbti-label {
-  font-size: 24px; /* MBTI 문자 크기 키움 */
-  font-weight: bold;
-  width: 30px; /* 고정 크기 */
-  text-align: left; /* 왼쪽 정렬 */
+.progress-bar .progress {
+  height: 75%;
+  border: 5px solid black;
+  padding: 0;
+  text-align: center;
+  color: #111;
+  border-radius: 20px 0 0 20px;
 }
 
-.mbti-bar {
-  width: 300px; /* 막대 길이 늘림 */
-  height: 25px; /* 막대 높이 증가 */
-  background-color: #d0d2d1;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
+.progress-bar .ei {
+  background-color: #1fae91;
+}
+.progress-bar .ns {
+  background-color: #d89737;
+}
+.progress-bar .tf {
+  background-color: #6cce45;
+}
+.progress-bar .pj {
+  background-color: #bc83c7;
 }
 
-.mbti-bar-fill {
-  height: 100%;
-  border-radius: 12px;
+.progress > span {
+  font-size: 18px;
 }
 
-.mbti-percentage-text {
-  font-size: 22px; /* 퍼센트 숫자 크기 증가 */
-  font-weight: bold;
-  min-width: 50px;
-  text-align: left;
+.label {
+  font-size: 30px;
+  padding-bottom: 30px;
+  color: #d3d3d3;
+}
+
+.label span {
+  font-size: 15px;
 }
 
 .game-container {

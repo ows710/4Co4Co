@@ -9,13 +9,18 @@
     <meta name="keywords" content="global, template, html, sass, jquery" />
     <meta name="author" content="Bucky Maler" />
     <link rel="stylesheet" href="assets/css/wonseok.css" />
+    <link rel="stylesheet" href="assets/css/dain.css" />
+    <script
+      src="https://kit.fontawesome.com/f4cec5df28.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- notification for small viewports and landscape oriented smartphones -->
     <div class="device-notification">
       <a class="device-notification--logo" href="./index.html">
         <img src="assets/img/logo.png" alt="Global" />
-        <p>4Co4Co</p>
+        <p>4CO4CO</p>
       </a>
       <p class="device-notification--message">
         Global has so much to offer that we must request you orient your device
@@ -31,7 +36,7 @@
             <header class="header">
               <a class="header--logo" href="./index.html">
                 <img src="assets/img/logo.png" alt="Global" />
-                <p>4Co4Co</p>
+                <p>4CO4CO</p>
               </a>
               <div class="header--nav-toggle">
                 <span></span>
@@ -428,54 +433,52 @@
               </li>
               <li class="l-section section">
                 <div class="about">
-                  <div class="about--banner">
-                    <!-- todo: 반응형 -->
-                    <h2 style="height: 250px">
+                  <div style="height: 200px" class="about--banner">
+                    <h2 style="font-size: 100px">
                       ISTJ
                       <br />
                     </h2>
-                    <div class="mbti-progress">
-                      <span class="mbti-label">I</span>
-                      <div class="mbti-bar">
-                        <div
-                          class="mbti-bar-fill"
-                          style="width: 66%; background-color: #1fae91"
-                        ></div>
+                  </div>
+                  <div style="margin-top: 35px">
+                    <label class="label">
+                      I
+                      <span> : 혼자 시간을 보내는 것을 선호하고</span>
+                    </label>
+                    <div class="progress-bar">
+                      <div style="width: 64%" class="progress ei">
+                        <span>66%</span>
                       </div>
-                      <span class="mbti-percentage-text">66%</span>
                     </div>
-
-                    <div class="mbti-progress">
-                      <span class="mbti-label">S</span>
-                      <div class="mbti-bar">
-                        <div
-                          class="mbti-bar-fill"
-                          style="width: 76%; background-color: #d89737"
-                        ></div>
+                    <label class="label">
+                      S
+                      <span> : 세부사항에 집중하고 경험을 통해 배우며 </span>
+                    </label>
+                    <div class="progress-bar">
+                      <div style="width: 65%" class="progress ns">
+                        <span>76%</span>
                       </div>
-                      <span class="mbti-percentage-text">76%</span>
                     </div>
-
-                    <div class="mbti-progress">
-                      <span class="mbti-label">T</span>
-                      <div class="mbti-bar">
-                        <div
-                          class="mbti-bar-fill"
-                          style="width: 63%; background-color: #6cce45"
-                        ></div>
+                    <label class="label">
+                      T
+                      <span style="font-size: 15px">
+                        : 논리적이고 체계적으로 문제를 해결합니다
+                      </span>
+                    </label>
+                    <div class="progress-bar">
+                      <div style="width: 60%" class="progress tf">
+                        <span>63%</span>
                       </div>
-                      <span class="mbti-percentage-text">63%</span>
                     </div>
-
-                    <div class="mbti-progress">
-                      <span class="mbti-label">J</span>
-                      <div class="mbti-bar">
-                        <div
-                          class="mbti-bar-fill"
-                          style="width: 75%; background-color: #bc83c7"
-                        ></div>
+                    <label class="label">
+                      J
+                      <span style="font-size: 15px">
+                        : 계획적이고 구조적인 방식으로 삶을 이끕니다
+                      </span>
+                    </label>
+                    <div class="progress-bar">
+                      <div style="width: 61%" class="progress pj">
+                        <span>75%</span>
                       </div>
-                      <span class="mbti-percentage-text">75%</span>
                     </div>
                   </div>
                 </div>
@@ -521,7 +524,6 @@
         );
     </script>
     <script src="assets/js/functions-min.js"></script>
-    <script src="assets/js/wonseok_audio.js"></script>
     <script src="assets/js/dnd.js"></script>
   </body>
 </html>
