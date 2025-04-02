@@ -59,7 +59,7 @@ pageEncoding="UTF-8"%>
                           <span class="btn-background"></span>
                         </button>
                       </a>
-                      <a href="./dain.html">
+                      <a href="./dain.jsp">
                         <button class="cta introbtn">
                           Dain Guk
                           <svg
@@ -84,7 +84,7 @@ pageEncoding="UTF-8"%>
                           <span class="btn-background"></span>
                         </button>
                       </a>
-                      <a href="./nky.html">
+                      <a href="./nky.jsp">
                         <button class="cta introbtn">
                           Kiyun Nam
                           <svg
@@ -145,11 +145,11 @@ pageEncoding="UTF-8"%>
                       <h3>Wonseok Oh</h3>
                       <p>조장</p>
                     </a>
-                    <a href="./dain.html">
+                    <a href="./dain.jsp">
                       <h3>Dain Guk</h3>
                       <p>조원</p>
                     </a>
-                    <a href="./nky.html">
+                    <a href="./nky.jsp">
                       <h3>Kiyun Nam</h3>
                       <p>조원</p>
                     </a>

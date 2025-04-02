@@ -17,41 +17,13 @@
     ></script>
   </head>
   <body>
-    <!-- notification for small viewports and landscape oriented smartphones -->
-    <div class="device-notification">
-      <a class="device-notification--logo" href="./index.html">
-        <img src="assets/img/logo.png" alt="Global" />
-        <p>Global</p>
-      </a>
-      <p class="device-notification--message">
-        Global has so much to offer that we must request you orient your device
-        to portrait or find a larger screen. You won't be disappointed.
-      </p>
-    </div>
-
     <div class="perspective effect-rotate-left">
       <div class="container">
         <div class="outer-nav--return"></div>
         <div id="viewport" class="l-viewport">
           <div class="l-wrapper">
-            <header class="header">
-              <a class="header--logo" href="./index.html">
-                <img src="assets/img/logo.png" alt="Global" />
-                <p>Global</p>
-              </a>
-              <div class="header--nav-toggle">
-                <span></span>
-              </div>
-            </header>
-            <nav class="l-side-nav">
-              <ul class="side-nav">
-                <li class="is-active"><span>Home</span></li>
-                <li><span>My Skills</span></li>
-                <li><span>Favorite Music</span></li>
-                <li><span>MBTI</span></li>
-                <li><span>Hire us</span></li>
-              </ul>
-            </nav>
+            <jsp:include page="/comm/header.jsp" />
+            <jsp:include page="/comm/leftSideNav.jsp"></jsp:include>
             <!-- 첫번째 부분 -->
             <ul class="l-main-content main-content">
               <li class="l-section section section--is-active">
@@ -404,13 +376,7 @@
           </div>
         </div>
       </div>
-      <ul class="outer-nav">
-        <li class="is-active">Home</li>
-        <li>My Skills</li>
-        <li>My Favorite Music</li>
-        <li>My MBTI</li>
-        <li>Hire us</li>
-      </ul>
+      <jsp:include page="/comm/outNav.jsp"></jsp:include>
     </div>
     <script src="assets/js/dain.js"></script>
     <script src="assets/js/video.js"></script>
