@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +12,6 @@
     <meta name="author" content="Bucky Maler" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/dain.css" />
-    <link rel="stylesheet" href="assets/css/video.css" />
     <script
       src="https://kit.fontawesome.com/f4cec5df28.js"
       crossorigin="anonymous"
@@ -19,7 +20,7 @@
   <body>
     <!-- notification for small viewports and landscape oriented smartphones -->
     <div class="device-notification">
-      <a class="device-notification--logo" href="./index.html">
+      <a class="device-notification--logo" href="./index.jsp">
         <img src="assets/img/logo.png" alt="Global" />
         <p>Global</p>
       </a>
@@ -34,24 +35,8 @@
         <div class="outer-nav--return"></div>
         <div id="viewport" class="l-viewport">
           <div class="l-wrapper">
-            <header class="header">
-              <a class="header--logo" href="./index.html">
-                <img src="assets/img/logo.png" alt="Global" />
-                <p>Global</p>
-              </a>
-              <div class="header--nav-toggle">
-                <span></span>
-              </div>
-            </header>
-            <nav class="l-side-nav">
-              <ul class="side-nav">
-                <li class="is-active"><span>Home</span></li>
-                <li><span>My Skills</span></li>
-                <li><span>Favorite Music</span></li>
-                <li><span>MBTI</span></li>
-                <li><span>Hire us</span></li>
-              </ul>
-            </nav>
+            <jsp:include page="/comm/header.jsp" />
+            <jsp:include page="/comm/leftSideNav.jsp"></jsp:include>
             <!-- 첫번째 부분 -->
             <ul class="l-main-content main-content">
               <li class="l-section section section--is-active">
@@ -302,7 +287,7 @@
                 <div class="about">
                   <div style="height: 200px" class="about--banner">
                     <h2 style="font-size: 100px">
-                      ISTP
+                      INFP
                       <br />
                     </h2>
                   </div>
@@ -312,39 +297,35 @@
                       <span> : 집에 가고 싶어하며</span>
                     </label>
                     <div class="progress-bar">
-                      <div style="width: 64%" class="progress ei">
-                        <span>64%</span>
+                      <div style="width: 82%" class="progress ei">
+                        <span>82%</span>
                       </div>
                     </div>
                     <label class="label">
-                      S
-                      <span> : 현실적으로 생각하고 </span>
+                      N
+                      <span> : 이상적으로 생각하며 </span>
                     </label>
                     <div class="progress-bar">
-                      <div style="width: 65%" class="progress ns">
+                      <div style="width: 61%" class="progress ns">
+                        <span>61%</span>
+                      </div>
+                    </div>
+                    <label class="label">
+                      F
+                      <span style="font-size: 15px"> : 감정적이고 </span>
+                    </label>
+                    <div class="progress-bar">
+                      <div style="width: 65%" class="progress tf">
                         <span>65%</span>
                       </div>
                     </div>
                     <label class="label">
-                      T
-                      <span style="font-size: 15px">
-                        : 이성적으로 판단하면서
-                      </span>
-                    </label>
-                    <div class="progress-bar">
-                      <div style="width: 60%" class="progress tf">
-                        <span>60%</span>
-                      </div>
-                    </div>
-                    <label class="label">
                       P
-                      <span style="font-size: 15px">
-                        : 즉흥적으로 살아갑니다
-                      </span>
+                      <span style="font-size: 15px"> : 무계획적으로 산다 </span>
                     </label>
                     <div class="progress-bar">
-                      <div style="width: 61%" class="progress pj">
-                        <span>61%</span>
+                      <div style="width: 71%" class="progress pj">
+                        <span>71%</span>
                       </div>
                     </div>
                   </div>
@@ -363,7 +344,7 @@
                       <source src="assets/mp4/video.mp4" type="video/mp4" />
                     </video>
                     <div id="video-menu">
-                      <div class="progress-bar">
+                      <div class="video-progress-bar">
                         <input
                           type="range"
                           id="video-progress"
@@ -404,13 +385,7 @@
           </div>
         </div>
       </div>
-      <ul class="outer-nav">
-        <li class="is-active">Home</li>
-        <li>My Skills</li>
-        <li>My Favorite Music</li>
-        <li>My MBTI</li>
-        <li>Hire us</li>
-      </ul>
+      <jsp:include page="/comm/outer-nav.jsp"></jsp:include>
     </div>
     <script src="assets/js/dain.js"></script>
     <script src="assets/js/video.js"></script>
