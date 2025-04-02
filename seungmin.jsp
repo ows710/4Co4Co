@@ -25,15 +25,7 @@ pageEncoding="UTF-8"%>
         <div id="viewport" class="l-viewport">
           <div class="l-wrapper">
             <jsp:include page="/comm/header.jsp" />
-            <nav class="l-side-nav">
-              <ul class="side-nav">
-                <li class="is-active"><span>Intro</span></li>
-                <li><span>Skills</span></li>
-                <li><span>Favorite Music</span></li>
-                <li><span>MBTI</span></li>
-                <li><span>Task</span></li>
-              </ul>
-            </nav>
+            <jsp:include page="/comm/leftSideNav.jsp"/>
             <ul class="l-main-content main-content">
               <li class="l-section section section--is-active">
                 <div class="intro">
@@ -434,13 +426,7 @@ pageEncoding="UTF-8"%>
           </div>
         </div>
       </div>
-      <ul class="outer-nav">
-        <li class="is-active">Intro</li>
-        <li>My Skills</li>
-        <li>My Favorite Music</li>
-        <li>My MBTI</li>
-        <li>Task</li>
-      </ul>
+      <jsp:include page="/comm/outer-nav.jsp"/>
     </div>
     <script src="assets/js/canvas.js"></script>
     <script src="assets/js/dain.js"></script>
