@@ -20,7 +20,7 @@ pageEncoding="UTF-8"%>
   <body>
     <!-- notification for small viewports and landscape oriented smartphones -->
     <div class="device-notification">
-      <a class="device-notification--logo" href="./index.html">
+      <a class="device-notification--logo" href="./index.jsp">
         <img src="assets/img/logo.png" alt="Global" />
         <p>Global</p>
       </a>
@@ -35,15 +35,7 @@ pageEncoding="UTF-8"%>
         <div class="outer-nav--return"></div>
         <div id="viewport" class="l-viewport">
           <div class="l-wrapper">
-            <header class="header">
-              <a class="header--logo" href="./index.html">
-                <img src="assets/img/logo.png" alt="Global" />
-                <p>Global</p>
-              </a>
-              <div class="header--nav-toggle">
-                <span></span>
-              </div>
-            </header>
+            <jsp:include page="/comm/header.jsp" />
             <nav class="l-side-nav">
               <ul class="side-nav">
                 <li class="is-active"><span>Home</span></li>
