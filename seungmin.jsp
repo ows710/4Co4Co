@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,39 +18,19 @@
     ></script>
   </head>
   <body>
-    <!-- notification for small viewports and landscape oriented smartphones -->
-    <div class="device-notification">
-      <a class="device-notification--logo" href="#0">
-        <img src="assets/img/logo.png" alt="Global" />
-        <p>Global</p>
-      </a>
-      <p class="device-notification--message">
-        Global has so much to offer that we must request you orient your device
-        to portrait or find a larger screen. You won't be disappointed.
-      </p>
-    </div>
-
     <div class="perspective effect-rotate-left">
       <div class="container">
         <div class="outer-nav--return"></div>
         <div id="viewport" class="l-viewport">
           <div class="l-wrapper">
-            <header class="header">
-              <a class="header--logo" href="./index.html">
-                <img src="assets/img/logo.png" alt="Global" />
-                <p>4CO4CO</p>
-              </a>
-              <div class="header--nav-toggle">
-                <span></span>
-              </div>
-            </header>
+            <jsp:include page="/comm/header.jsp" />
             <nav class="l-side-nav">
               <ul class="side-nav">
                 <li class="is-active"><span>Intro</span></li>
                 <li><span>Skills</span></li>
                 <li><span>Favorite Music</span></li>
                 <li><span>MBTI</span></li>
-                <li><span>Canvas</span></li>
+                <li><span>Task</span></li>
               </ul>
             </nav>
             <ul class="l-main-content main-content">
@@ -402,7 +384,7 @@
                   <div style="margin-top: 35px">
                     <label class="label">
                       E
-                      <span> : 밖에 나가는 것을 좋아하고 </span>
+                      <span> : 밖에 나가는 것을 좋아하고  </span>
                     </label>
                     <div class="progress-bar">
                       <div style="width: 64%" class="progress ei">
@@ -453,7 +435,7 @@
         <li>My Skills</li>
         <li>My Favorite Music</li>
         <li>My MBTI</li>
-        <li>Canvas</li>
+        <li>Task</li>
       </ul>
     </div>
     <script src="assets/js/dain.js"></script>
