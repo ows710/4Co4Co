@@ -12,6 +12,7 @@ pageEncoding="UTF-8"%>
     <meta name="author" content="Bucky Maler" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/dain.css" />
+    <link rel="stylesheet" href="assets/css/canvas.css" />
     <script
       src="https://kit.fontawesome.com/f4cec5df28.js"
       crossorigin="anonymous"
@@ -89,8 +90,6 @@ pageEncoding="UTF-8"%>
               <li class="l-section section">
                 <div class="hire">
                   <h2>My Skills</h2>
-                  <!-- checkout formspree.io for easy form setup -->
-
                   <div class="work-request--options">
                     <span class="options-a">
                       <input id="opt-1" type="checkbox" value="app design" />
@@ -425,7 +424,12 @@ pageEncoding="UTF-8"%>
                   </div>
                 </div>
               </li>
-              <li class="l-section section"></li>
+              <li class="l-section section">
+                <div class="work">
+                  <h2>Canvas</h2>
+                  <canvas id="canvas"></canvas>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -438,6 +442,7 @@ pageEncoding="UTF-8"%>
         <li>Task</li>
       </ul>
     </div>
+    <script src="assets/js/canvas.js"></script>
     <script src="assets/js/dain.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>

@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +11,12 @@
   <meta name="keywords" content="global, template, html, sass, jquery">
   <meta name="author" content="Bucky Maler">
   <link rel="stylesheet" href="assets/css/nky.css">
+  <link rel="stylesheet" href="assets/css/dain.css" />
+    <script
+      src="https://kit.fontawesome.com/f4cec5df28.js"
+      crossorigin="anonymous"
+    ></script>
+ <script src="assets/js/dain.js"></script>
   <script type="text/javascript" 
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9be8de46cc892ba13e3d93b26b3600ad&libraries=services"></script>
                 <script defer>
@@ -107,87 +115,6 @@ document.querySelectorAll('.slider--item');
         };
 }
   });
-  document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.querySelector(".slider");
-  const nextBtn = document.querySelector(".slider--next");
-  const prevBtn = document.querySelector(".slider--prev");
-
-  // function reorderSlides() {
-  //   const items = Array.from(slider.children);
-
-  //   const stress = items.find(item => item.textContent.includes("Stress"));
-  //   const center = items.find(item => item.textContent.includes("반비례"));
-  //   const right = items.find(item => item.textContent.includes("피차일반"));
-
-  //   slider.innerHTML = "";
-  //   slider.appendChild(stress);
-  //   slider.appendChild(center);
-  //   slider.appendChild(right);
-  // }
-  // 👉 슬라이드 클래스 갱신
-  let currentIndex = 1; // 처음엔 반비례 (index 1이 중앙)
-
-function updateClasses() {
-  const items = slider.querySelectorAll(".slider--item");
-  const total = items.length;
-
-  items.forEach(item => {
-    item.classList.remove("slider--item-left", "slider--item-center", "slider--item-right");
-  });
-
-  const leftIndex = (currentIndex - 1 + total) % total;
-  const centerIndex = currentIndex;
-  const rightIndex = (currentIndex + 1) % total;
-
-  items[leftIndex].classList.add("slider--item-left");
-  items[centerIndex].classList.add("slider--item-center");
-  items[rightIndex].classList.add("slider--item-right");
-
-  updateAudioForCenterSlide();
-}
-
-function slideNext() {
-  const items = slider.querySelectorAll(".slider--item");
-  currentIndex = (currentIndex + 1) % items.length;
-  updateClasses();
-}
-
-function slidePrev() {
-  const items = slider.querySelectorAll(".slider--item");
-  currentIndex = (currentIndex - 1 + items.length) % items.length;
-  updateClasses();
-}
-
-  // 👉 음악 업데이트
-  function updateAudioForCenterSlide() {
-    const centerSlide = document.querySelector('.slider--item-center');
-    const titleEl = centerSlide.querySelector('.slider--item-title');
-    const title = titleEl ? titleEl.textContent.trim() : null;
-
-    if (!title) return;
-
-    const audio = document.getElementById('mainAudio');
-    const audioSource = document.getElementById('mainAudioSource');
-    const filename = title.replace(/\s+/g, '') + '.mp3';
-    const newSrc = `assets/music/${filename}`;
-
-    if (!audioSource.src.includes(filename)) {
-      audio.pause();
-      audioSource.src = newSrc;
-      audio.load();
-      audio.play().catch(err => {
-        console.log('재생 실패:', err);
-      });
-    }
-  }
-  reorderSlides();
-  updateClasses();
-  // ✅ 버튼 이벤트 연결 (중복 X)
-  nextBtn.addEventListener("click", slideNext);
-  prevBtn.addEventListener("click", slidePrev);
-  });
-
-  console.log(document.querySelectorAll('.slider--item-center'));
               </script>
 </head>
 <body>
@@ -215,16 +142,7 @@ function slidePrev() {
             <span></span>
           </div>
         </header>
-        <nav class="l-side-nav">
-          <ul class="side-nav">
-            <li class="is-active"><span>Home</span></li>
-            <li><span>My Skills</span></li>
-            <li><span>My Favorite</span></li>
-            <li><span>Music</span></li>
-            <li><span>My Mbti</span></li>
-            <li><span>Map</span></li>
-          </ul>
-        </nav>
+        <jsp:include page="./assets/comm/leftSideNav.jsp"></jsp:include>
         <ul class="l-main-content main-content">
           <li class="l-section section section--is-active">
             <div class="intro">
@@ -242,8 +160,8 @@ function slidePrev() {
               </div>
               <div class="intro--options">
                 <a href="#0">
-                  <h3>Metiew &amp; Smith</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                  <h3>제주대학교</h3>
+                  <p>컴퓨터공학전공</p>
                 </a>
                 <a href="#0">
                   <h3>Fantasy interactive</h3>
@@ -394,7 +312,59 @@ function slidePrev() {
               </div>
             </div>
           </li>
-          <!-- 4번째 -->
+          <li class="l-section section">
+            <div class="about">
+              <div style="height: 200px" class="about--banner">
+                <h2 style="font-size: 100px">
+                  ISFP
+                  <br />
+                </h2>
+              </div>
+              <div style="margin-top: 35px">
+                <label class="label">
+                  I
+                  <span> : 밖에 나가는 것을 좋아하고 </span>
+                </label>
+                <div class="progress-bar">
+                  <div style="width: 54%" class="progress ei">
+                    <span>54%</span>
+                  </div>
+                </div>
+                <label class="label">
+                  S
+                  <span> : 직관적으로 생각하며 </span>
+                </label>
+                <div class="progress-bar">
+                  <div style="width: 54%" class="progress ns">
+                    <span>54%</span>
+                  </div>
+                </div>
+                <label class="label">
+                  F
+                  <span style="font-size: 15px">
+                    : 이성적으로 판단하면서
+                  </span>
+                </label>
+                <div class="progress-bar">
+                  <div style="width: 56%" class="progress tf">
+                    <span>56%</span>
+                  </div>
+                </div>
+                <label class="label">
+                  P
+                  <span style="font-size: 15px">
+                    : 즉흥적으로 살아갑니다
+                  </span>
+                </label>
+                <div class="progress-bar">
+                  <div style="width: 68%" class="progress pj">
+                    <span>68%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- 5번째 -->
           <li class="l-section section">
             <div class="map">
               <h2>Map</h2>
