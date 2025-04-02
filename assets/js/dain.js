@@ -1,12 +1,57 @@
+/**
+ * Description placeholder
+ *
+ * @type {*}
+ */
 const progress = document.getElementById("progress"); //노래 재생바
+/**
+ * Description placeholder
+ *
+ * @type {*}
+ */
 const ctrlIconList = Array.from(document.getElementsByClassName("ctrlIcon"));
+/**
+ * Description placeholder
+ *
+ * @type {*}
+ */
 const controlsList = Array.from(document.getElementsByClassName("controls"));
+/**
+ * Description placeholder
+ *
+ * @type {*}
+ */
 const songList = Array.from(document.getElementsByClassName("song"));
+/**
+ * Description placeholder
+ *
+ * @type {*}
+ */
 const sliderPrev = Array.from(document.getElementsByClassName("slider--prev"));
+/**
+ * Description placeholder
+ *
+ * @type {*}
+ */
 const sliderNext = Array.from(document.getElementsByClassName("slider--next"));
+/**
+ * Description placeholder
+ *
+ * @type {*}
+ */
 const img = document.querySelectorAll(".slider--item-image img");
+/**
+ * Description placeholder
+ *
+ * @type {*}
+ */
 const work = document.querySelector(".work");
 
+/**
+ * Description placeholder
+ *
+ * @type {number}
+ */
 let currentSong = 1;
 //각 컨트롤마다 노래재생 멈춤 기능 추가
 controlsList.forEach((control) => {
@@ -20,6 +65,11 @@ controlsList.forEach((control) => {
 });
 
 //오디오 재생
+/**
+ * Description placeholder
+ *
+ * @param {*} song
+ */
 function audioPlay(song) {
   songList[song].play();
   ctrlIconList[song].classList.add("fa-pause");
@@ -30,6 +80,11 @@ function audioPlay(song) {
 }
 
 //오디오 멈춤
+/**
+ * Description placeholder
+ *
+ * @param {*} song
+ */
 function audioStop(song) {
   songList[song].pause();
   ctrlIconList[song].classList.remove("fa-pause");
@@ -38,6 +93,11 @@ function audioStop(song) {
 }
 
 //재생버튼 안보이게
+/**
+ * Description placeholder
+ *
+ * @param {*} currentSong
+ */
 function hidden(currentSong) {
   for (let i = 0; i < controlsList.length; i++) {
     if (currentSong != i) controlsList[i].classList.add("hidden");

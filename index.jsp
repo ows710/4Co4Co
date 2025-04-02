@@ -34,7 +34,7 @@ pageEncoding="UTF-8"%>
                   <div class="intro--banner">
                     <h1>4CO4CO</h1>
                     <div class="fourco">
-                      <a href="./wonseok.html">
+                      <a href="./wonseok.jsp">
                         <button class="cta introbtn">
                           Wonseok Oh
                           <svg
@@ -141,7 +141,7 @@ pageEncoding="UTF-8"%>
                     />
                   </div>
                   <div class="intro--options">
-                    <a href="./wonseok.html">
+                    <a href="./wonseok.jsp">
                       <h3>Wonseok Oh</h3>
                       <p>조장</p>
                     </a>
