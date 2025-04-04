@@ -39,3 +39,5 @@ config.codekit3
 
 .settings/
 .project
+.node_modules/
+.vscode/
