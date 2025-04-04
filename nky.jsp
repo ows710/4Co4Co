@@ -202,7 +202,7 @@ pageEncoding="UTF-8"%>
                 <div class="hire">
                   <h2>My Skills</h2>
                   <!-- checkout formspree.io for easy form setup -->
-    
+
                   <div class="work-request--options">
                     <span class="options-a">
                       <input id="opt-1" type="checkbox" value="app design" />
