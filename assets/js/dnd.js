@@ -1,184 +1,219 @@
-/**
- * Description placeholder
- *
- * @type {{}}
- */
 const problems = [
   {
-    question: "자바스크립트 코드 실행 과정 (호이스팅 포함)",
+    question: "변수를 선언하고 값을 할당하는 기본 흐름",
     steps: [
-      "초기화 단계 (var 변수 초기화, 함수 선언 할당)",
-      "실행 컨텍스트 생성 (글로벌/함수)",
-      "함수 실행 (코드가 실제로 실행됨)",
-      "변수 선언 (변수 이름은 등록되지만 값은 할당되지 않음)",
+      "변수 선언 (`let`)",
+      "값 할당 (`=`)",
+      "변수 사용 (출력 등)",
+      "코드 실행"
     ],
     correctOrder: [
-      "실행 컨텍스트 생성 (글로벌/함수)",
-      "변수 선언 (변수 이름은 등록되지만 값은 할당되지 않음)",
-      "초기화 단계 (var 변수 초기화, 함수 선언 할당)",
-      "함수 실행 (코드가 실제로 실행됨)",
-    ],
+      "변수 선언 (`let`)",
+      "값 할당 (`=`)",
+      "변수 사용 (출력 등)",
+      "코드 실행"
+    ]
   },
   {
-    question: "이벤트 루프 (Event Loop) 동작 과정",
+    question: "자바스크립트에서 콘솔 출력하는 방법",
     steps: [
-      "마이크로태스크 큐 처리 (Promises, MutationObserver 등)",
-      "태스크 큐 처리 (setTimeout, DOM 이벤트 등)",
-      "Call Stack이 비워질 때까지 실행",
-      "렌더링 (브라우저가 화면을 업데이트)",
+      "콘솔 객체 접근 (`console`)",
+      "메서드 지정 (`log`)",
+      "출력할 값 작성",
+      "실행"
     ],
     correctOrder: [
-      "Call Stack이 비워질 때까지 실행",
-      "마이크로태스크 큐 처리 (Promises, MutationObserver 등)",
-      "렌더링 (브라우저가 화면을 업데이트)",
-      "태스크 큐 처리 (setTimeout, DOM 이벤트 등)",
-    ],
+      "콘솔 객체 접근 (`console`)",
+      "메서드 지정 (`log`)",
+      "출력할 값 작성",
+      "실행"
+    ]
   },
   {
-    question: "비동기 코드 실행 과정 (콜백, 프로미스, async/await)",
+    question: "기본 이벤트 처리 흐름",
     steps: [
-      "콜백 함수는 다른 함수의 인자로 전달되어 실행을 지연시킨다",
-      "프로미스는 비동기 작업의 완료 또는 실패를 나타내는 객체",
-      "async 함수는 항상 프로미스를 반환하며, await는 프로미스가 처리될 때까지 기다린다",
-      "비동기 작업이 끝나면 결과가 콜백 또는 프로미스를 통해 반환",
+      "요소 선택",
+      "이벤트 리스너 추가",
+      "함수 정의",
+      "이벤트 발생 시 실행"
     ],
     correctOrder: [
-      "콜백 함수는 다른 함수의 인자로 전달되어 실행을 지연시킨다",
-      "프로미스는 비동기 작업의 완료 또는 실패를 나타내는 객체",
-      "비동기 작업이 끝나면 결과가 콜백 또는 프로미스를 통해 반환",
-      "async 함수는 항상 프로미스를 반환하며, await는 프로미스가 처리될 때까지 기다린다",
-    ],
+      "요소 선택",
+      "이벤트 리스너 추가",
+      "함수 정의",
+      "이벤트 발생 시 실행"
+    ]
   },
   {
-    question: "클로저(Closure) 동작 과정",
+    question: "조건문 if의 실행 흐름",
     steps: [
-      "외부 함수 실행 후, 내부 함수가 외부 함수의 변수에 접근 가능",
-      "내부 함수가 외부 함수의 변수에 접근하려면 해당 변수를 참조",
-      "클로저는 함수가 선언될 당시의 스코프(환경)를 기억",
-      "내부 함수가 외부 함수의 스코프를 참조하면서 클로저가 형성됨",
+      "조건 비교",
+      "조건이 true인지 확인",
+      "코드 실행",
+      "if 문 종료"
     ],
     correctOrder: [
-      "내부 함수가 외부 함수의 변수에 접근하려면 해당 변수를 참조",
-      "클로저는 함수가 선언될 당시의 스코프(환경)를 기억",
-      "내부 함수가 외부 함수의 스코프를 참조하면서 클로저가 형성됨",
-      "외부 함수 실행 후, 내부 함수가 외부 함수의 변수에 접근 가능",
-    ],
+      "조건 비교",
+      "조건이 true인지 확인",
+      "코드 실행",
+      "if 문 종료"
+    ]
   },
   {
-    question: "this 키워드의 동작",
+    question: "배열에 요소를 추가하고 출력하는 순서",
     steps: [
-      "일반 함수 호출 시, this는 전역 객체(window 또는 global)",
-      "객체의 메서드 내에서, this는 그 객체를 참조",
-      "화살표 함수 내에서, this는 상위 스코프의 this를 참조",
-      "이벤트 핸들러 내에서, this는 이벤트를 발생시킨 DOM 요소",
+      "배열 선언",
+      "요소 추가 (push)",
+      "반복문 작성",
+      "콘솔에 출력"
     ],
     correctOrder: [
-      "일반 함수 호출 시, this는 전역 객체(window 또는 global)",
-      "객체의 메서드 내에서, this는 그 객체를 참조",
-      "이벤트 핸들러 내에서, this는 이벤트를 발생시킨 DOM 요소",
-      "화살표 함수 내에서, this는 상위 스코프의 this를 참조",
-    ],
-  },
+      "배열 선언",
+      "요소 추가 (push)",
+      "반복문 작성",
+      "콘솔에 출력"
+    ]
+  }
 ];
 
-/**
- * Description placeholder
- *
- * @type {number}
- */
+
 let currentProblemIndex = 0;
-/**
- * Description placeholder
- *
- * @type {*}
- */
 let draggedItem = null;
+let chances = 3;
+let timer = 60;
+let interval = null;
 
-function loadProblem(problemIndex) {
-  const problem = problems[problemIndex];
-  const problemContainer = document.getElementById("problemContainer");
+function loadProblem(index) {
+  const { question, steps } = problems[index];
+  document.getElementById("problemContainer").innerHTML = `<h3>${question}</h3>`;
 
-  problemContainer.innerHTML = `
-    <h3>${problem.question}</h3>
-    <div class="snippets">
-      ${problem.steps
-        .map(
-          (snippet) => `<div class="snippet" draggable="true">${snippet}</div>`
-        )
-        .join("")}
-    </div>
-    <div class="target-area" id="targetArea" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <p>여기에 순서대로 드래그해서 배치하세요.</p>
-    </div>
-  `;
+  const snippetContainer = document.getElementById("snippets");
+  snippetContainer.innerHTML = steps.map(step =>
+    `<div class="snippet" draggable="true">${step}</div>`
+  ).join("");
 
-  document.querySelectorAll(".snippet").forEach((item) => {
-    item.addEventListener("dragstart", (e) => {
+  document.querySelectorAll(".snippet").forEach(snippet => {
+    snippet.addEventListener("dragstart", e => {
       draggedItem = e.target;
       e.target.classList.add("dragging");
     });
-
-    item.addEventListener("dragend", () => {
-      draggedItem.classList.remove("dragging");
-      draggedItem = null;
+    snippet.addEventListener("dragend", e => {
+      e.target.classList.remove("dragging");
     });
   });
 
-  document.getElementById("result").innerText = "";
+  document.querySelectorAll(".drop-zone").forEach(zone => {
+    zone.innerHTML = "";
+  });
+
+  document.getElementById("result").textContent = "";
   document.getElementById("nextButton").disabled = true;
+
+  // 타이머 초기화
+  clearInterval(interval);
+  timer = 30;
+  document.getElementById("timer").textContent = `⏰ ${timer}`;
+  interval = setInterval(() => {
+    timer--;
+    document.getElementById("timer").textContent = `⏰ ${timer}`;
+    if (timer <= 0) {
+      clearInterval(interval);
+      checkSolution();
+    }
+  }, 1000);
 }
 
-/**
- * Description placeholder
- *
- * @param {*} event
- */
-function allowDrop(event) {
-  event.preventDefault();
+function allowDrop(e) {
+  e.preventDefault();
 }
 
-/**
- * Description placeholder
- *
- * @param {*} event
- */
-function drop(event) {
-  event.preventDefault();
-  if (draggedItem && event.target.classList.contains("target-area")) {
-    event.target.appendChild(draggedItem);
+function drop(e, index) {
+  e.preventDefault();
+  const zones = document.querySelectorAll(".drop-zone");
+
+  if (!draggedItem) return;
+
+  const targetZone = zones[index];
+  const existing = targetZone.firstChild;
+
+  if (!existing) {
+    targetZone.appendChild(draggedItem);
+  } else {
+    const originZone = draggedItem.parentElement;
+
+    targetZone.replaceChild(draggedItem, existing);
+
+    if (originZone.classList.contains("drop-zone")) {
+      originZone.appendChild(existing);
+    } else {
+      document.getElementById("snippets").appendChild(existing);
+    }
   }
 }
 
-/** Description placeholder */
+function dropToSnippets(e) {
+  e.preventDefault();
+  if (draggedItem) {
+    document.getElementById("snippets").appendChild(draggedItem);
+  }
+}
+
 function checkSolution() {
-  const targetArea = document.getElementById("targetArea");
+  const zones = document.querySelectorAll(".drop-zone");
+  const userOrder = Array.from(zones).map(zone => zone.innerText.trim());
+  const correct = problems[currentProblemIndex].correctOrder;
 
-  const userSolution = Array.from(targetArea.children)
-    .map((child) => child.innerText.trim())
-    .filter((text) => text !== "여기에 순서대로 드래그해서 배치하세요.");
-
-  const correctOrder = problems[currentProblemIndex].correctOrder;
-
-  if (JSON.stringify(userSolution) === JSON.stringify(correctOrder)) {
-    document.getElementById("result").innerText = "정답입니다!";
+  if (JSON.stringify(userOrder) === JSON.stringify(correct)) {
+    document.getElementById("result").textContent = "🎉 정답입니다!";
     document.getElementById("result").style.color = "green";
     document.getElementById("nextButton").disabled = false;
+    clearInterval(interval);
   } else {
-    document.getElementById("result").innerText = "다시 시도해 보세요!";
+    if (chances > 0) chances--;
+    document.getElementById("chances").textContent = `남은 기회: ${chances}회`;
+
+    if (chances === 0) {
+      document.getElementById("result").textContent = "😢 기회를 모두 소진했습니다. 정답을 맞혀야 다음 문제로 넘어갈 수 있습니다.";
+    } else {
+      document.getElementById("result").textContent = "❌ 오답입니다. 다시 시도해보세요!";
+    }
+
     document.getElementById("result").style.color = "red";
+    clearInterval(interval); // 틀려도 타이머 멈추도록 설정
   }
 }
 
-/** Description placeholder */
 function nextProblem() {
   currentProblemIndex++;
+  chances = 3;
+  document.getElementById("chances").textContent = `남은 기회: ${chances}회`;
 
   if (currentProblemIndex < problems.length) {
     loadProblem(currentProblemIndex);
   } else {
-    document.getElementById("result").innerText = "모든 문제를 해결했습니다!";
-    document.getElementById("nextButton").disabled = true;
+
+    clearInterval(interval);
+    document.getElementById("problemContainer").innerHTML = `
+      <div style="text-align: center;">
+        <h1>🎉 모든 문제를 풀었습니다!<br>축하드립니다!</h1>
+      </div>
+    `;
+
+    document.getElementById("snippets").innerHTML = "";
+    document.querySelector(".target-wrapper").style.display = "none";
+    document.getElementById("result").textContent = "";
+    document.getElementById("nextButton").style.display = "none";
+
+    document.getElementById("timer").style.display = "none";
+    document.getElementById("chances").style.display = "none";
+
+    const checkBtn = document.querySelector("button[onclick='checkSolution()']");
+    checkBtn.textContent = "홈으로 돌아가기";
+    checkBtn.onclick = () => {
+      window.location.href = "/4Co4Co/wonseok.jsp";
+    };
   }
 }
 
-loadProblem(currentProblemIndex);
+
+window.onload = () => loadProblem(currentProblemIndex);

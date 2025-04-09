@@ -30,7 +30,7 @@ pageEncoding="UTF-8"%>
                 <div class="intro">
                   <div class="intro--banner">
                     <h1>Web Developer<br />Oh Wonseok<br /></h1>
-                    <button
+                    <button type="button"
                       class="cta"
                       onclick="location.href='https://github.com/ows710'"
                     >
@@ -56,7 +56,11 @@ pageEncoding="UTF-8"%>
                       </svg>
                       <span class="btn-background"></span>
                     </button>
-                    <img src="assets/img/logo.png" alt="Welcome" />
+                    <img
+                      src="assets/img/wonseok.png"
+                      style="width: 50%; right: -100px"
+                      alt="Welcome"
+                    />
                   </div>
                   <div class="intro--options">
                     <a href="#0">
@@ -305,7 +309,7 @@ pageEncoding="UTF-8"%>
                       <li class="slider--item slider--item-left">
                         <a href="#0">
                           <div class="slider--item-image">
-                            <img src="assets/img/a.png" alt="needy" />
+                            <img src="assets/img/a.png" alt="a" />
                             <div class="slider--item-image controls hidden">
                               <div>
                                 <i class="fa-solid fa-play ctrlIcon"></i>
@@ -313,7 +317,7 @@ pageEncoding="UTF-8"%>
                             </div>
                           </div>
                           <p class="slider--item-title">돌덩이</p>
-                          <p class="slider--item-description">하현우</p>
+                          <p class="slider--item-description">하현우(국카스텐)</p>
                           <audio class="slider--item-description song">
                             <source src="assets/mp3/a.mp3" />
                           </audio>
@@ -322,7 +326,7 @@ pageEncoding="UTF-8"%>
                       <li class="slider--item slider--item-center">
                         <a href="#0">
                           <div class="slider--item-image">
-                            <img src="assets/img/b.png" alt="needy" />
+                            <img src="assets/img/b.png" alt="b" />
                             <div class="slider--item-image controls">
                               <div>
                                 <i class="ctrlIcon fa-solid fa-play"></i>
@@ -333,7 +337,7 @@ pageEncoding="UTF-8"%>
                             흔들리는 꽃들 속에서 네 샴푸향이 느껴질거야
                           </p>
                           <p class="slider--item-description">
-                            아리아나 그란데
+                            장범준
                           </p>
                           <audio class="slider--item-description song">
                             <source src="assets/audio/b.mp3" />
@@ -343,7 +347,7 @@ pageEncoding="UTF-8"%>
                       <li class="slider--item slider--item-right">
                         <a href="#0">
                           <div class="slider--item-image">
-                            <img src="assets/img/c.png" alt="oriental-wind" />
+                            <img src="assets/img/c.png" alt="c" />
                             <div class="slider--item-image controls hidden">
                               <div>
                                 <i class="ctrlIcon fa-solid fa-play"></i>
@@ -460,19 +464,30 @@ pageEncoding="UTF-8"%>
               <li class="l-section section">
                 <div class="game-container">
                   <h1>JavaScript 개념 정복하기</h1>
-
-                  <div id="problemContainer">
-                    <!-- 문제 내용은 자바스크립트로 추가됩니다 -->
+                  
+                  <div class="status-bar">
+                    <div id="timer">⏰ 30</div>
+                    <div id="chances">남은 기회: 3회</div>
                   </div>
+              
+                  <div id="problemContainer"></div>
+              
+                  <div class="target-wrapper">
+                    <div class="drop-zone" ondrop="drop(event, 0)" ondragover="allowDrop(event)"></div>
+                    <div class="arrow">➡️</div>
+                    <div class="drop-zone" ondrop="drop(event, 1)" ondragover="allowDrop(event)"></div>
+                    <div class="arrow">➡️</div>
+                    <div class="drop-zone" ondrop="drop(event, 2)" ondragover="allowDrop(event)"></div>
+                    <div class="arrow">➡️</div>
+                    <div class="drop-zone" ondrop="drop(event, 3)" ondragover="allowDrop(event)"></div>
+                  </div>
+              
+                  <div class="snippet-container" id="snippets" ondrop="dropToSnippets(event)" ondragover="allowDrop(event)"></div>
 
+              
                   <button onclick="checkSolution()">확인</button>
                   <div class="result" id="result"></div>
-                  <button
-                    id="nextButton"
-                    class="next-btn"
-                    onclick="nextProblem()"
-                    disabled
-                  >
+                  <button id="nextButton" class="next-btn" onclick="nextProblem()">
                     다음 문제로 넘어가기
                   </button>
                 </div>
@@ -492,6 +507,7 @@ pageEncoding="UTF-8"%>
         );
     </script>
     <script src="assets/js/functions-min.js"></script>
+    <script src="assets/js/dain.js"></script>
     <script src="assets/js/dnd.js"></script>
   </body>
 </html>
