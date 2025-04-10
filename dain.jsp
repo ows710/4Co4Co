@@ -57,7 +57,7 @@ pageEncoding="UTF-8"%>
                       </svg>
                       <span class="btn-background"></span>
                     </button>
-                    <img src="assets/img/dain.jpg" alt="Welcome" width="50%" />
+                    <img src="assets/img/dain.png" alt="Welcome" width="50%" />
                   </div>
                   <div class="intro--options">
                     <a href="#0">
