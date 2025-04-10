@@ -1930,6 +1930,7 @@ body {
   background-color: #888;
   height: 25px;
   border-radius: 10px;
+  border: none;
 }
 
 .line-select {
@@ -1952,5 +1953,6 @@ body {
 .subway-select {
   float: right;
   display: flex;
-  gap: 5px;
+  gap: 7px;
+  align-items: center;
 }
