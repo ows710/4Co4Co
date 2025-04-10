@@ -1220,7 +1220,8 @@
 
       if (
         e + 1 === 3 &&
-        window.location.pathname !== "/4Co4Co_copy/index.jsp"
+        window.location.pathname !== "/4Co4Co_copy/index.jsp" &&
+        window.location.pathname !== "/4Co4Co_copy/"
       ) {
         $(".ctrlIcon").addClass("fa-pause");
         $(".ctrlIcon").removeClass("fa-play");
