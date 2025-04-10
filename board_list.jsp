@@ -60,10 +60,10 @@ pageEncoding="UTF-8"%>
         <div class="footer">
           <ul class="pagination">
             <li>
-              <a href="#" class="text-secondary prev-page-button">◀</a>
+              <button class="text-secondary prev-page-button">◀</button>
             </li>
             <li>
-              <a href="#" class="text-secondary next-page-button">▶</a>
+              <button class="text-secondary next-page-button">▶</button>
             </li>
           </ul>
           <div class="search">
