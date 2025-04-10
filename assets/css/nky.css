@@ -2021,3 +2021,8 @@
     align-items: center; /* 내부 요소 가로 가운데 정렬 */
     justify-content: center; /* 내부 요소 세로 가운데 정렬 */
   }
+
+  #info{
+    text-decoration-line: none;
+    color: #000;
+  }

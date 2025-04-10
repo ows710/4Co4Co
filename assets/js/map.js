@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ✅ 커스텀 마커 이미지 설정
   const markerImageSrc = {
-    CE7: "https://cdn-icons-png.flaticon.com/512/685/685352.png", // 카페
-    FD6: "https://cdn-icons-png.flaticon.com/512/3595/3595455.png", // 음식점
+    CE7: "assets/img/coffee.png",       // 카페
+    FD6: "assets/img/restaurant_.png",     // 음식점
   };
 
   window.toggleCategory = function (category) {
@@ -66,8 +66,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 image: markerImage,
               });
 
-              // 클릭 이벤트
+              // 마커 클릭 이벤트
               kakao.maps.event.addListener(marker, "click", function () {
+                // 도착지 설정 모드일 때: 상세정보 창 없이 도보 경로 요청만 수행
+                if (isSettingDestination) {
+                  isSettingDestination = false;
+                  getWalkingRoute(startLatLng, new kakao.maps.LatLng(place.y, place.x), map);
+                  return;
+                }
+                
+                // 도착지 설정 모드가 아닌 경우: 상세정보 창(커스텀 오버레이) 표시
                 const name = place.place_name || "이름 없음";
                 const address = place.road_address_name || place.address_name || "주소 정보 없음";
                 const phone = place.phone ? "전화: " + place.phone : "";
@@ -83,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <strong>${name}</strong><br/>
                     ${address}<br/>
                     ${phone ? phone + "<br/>" : ""}
-                    <a href="${url}" target="_blank">상세보기</a>
+                    <a href="${url}" target="_blank" id="info">상세보기</a>
                   </div>
                 `;
                 content.querySelector(".close-btn").addEventListener("click", () => {
@@ -93,12 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 customOverlay.setContent(content);
                 customOverlay.setPosition(marker.getPosition());
                 customOverlay.setMap(map);
-
-                // 도착지 설정 모드일 때 도보 경로 요청
-                if (isSettingDestination) {
-                  isSettingDestination = false;
-                  getWalkingRoute(startLatLng, new kakao.maps.LatLng(place.y, place.x), map);
-                }
               });
 
               markers[category].push(marker);
@@ -110,28 +112,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  // "도착지 설정" 버튼
+  // "도착지 설정" 버튼 이벤트 핸들러
   document.getElementById("set-destination-btn").addEventListener("click", () => {
     isSettingDestination = true;
-    alert("도착지 마커를 클릭하세요!");
+    Swal.fire({
+      "title":"경로 설정",
+      "text":"도착지 마커를 입력해주세요!",
+      "icon":"info"
+    });
   });
 });
 
-// ✅ Kakao REST API로 도보 경로 요청
+//Kakao REST API로 도보 경로 요청
 function getWalkingRoute(origin, destination, map) {
-  const url = `https://apis-navi.kakaomobility.com/v1/directions?origin=${origin.getLng()},${origin.getLat()}&destination=${destination.getLng()},${destination.getLat()}&priority=RECOMMEND`;
+  const url = `https://apis-navi.kakaomobility.com/v1/directions?origin=${origin.getLng()},${origin.getLat()}&destination=${destination.getLng()},${destination.getLat()}&priority=DISTANCE`;
 
   fetch(url, {
     method: "GET",
     headers: {
-      Authorization: "KakaoAK 8f3f4fbbdc2ee96320e80ce1576e7b63", // ← 본인 키로 교체 필요
+      Authorization: "KakaoAK 8f3f4fbbdc2ee96320e80ce1576e7b63",
     },
   })
     .then((res) => res.json())
     .then((data) => {
       const route = data.routes?.[0];
       if (!route) {
-        alert("경로를 찾을 수 없습니다.");
+        Swal.fire({
+          "title":"Worng Location!",
+          "text":"잘못된 경로를 입력하셨습니다.",
+          "icon":"error"
+        });
         return;
       }
 
@@ -158,6 +168,10 @@ function getWalkingRoute(origin, destination, map) {
     })
     .catch((err) => {
       console.error("도보 경로 요청 실패:", err);
-      alert("경로 요청에 실패했습니다.");
+      Swal.fire({
+        "title":"Worng Location!",
+        "text":"잘못된 경로를 입력하셨습니다.",
+        "icon":"error"
+      });
     });
 }

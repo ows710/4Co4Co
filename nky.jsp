@@ -12,6 +12,9 @@ pageEncoding="UTF-8"%>
     <meta name="author" content="Bucky Maler" />
     <link rel="stylesheet" href="assets/css/nky.css" />
     <link rel="stylesheet" href="assets/css/dain.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+
     <script
       src="https://kit.fontawesome.com/f4cec5df28.js"
       crossorigin="anonymous"
