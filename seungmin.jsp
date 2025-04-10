@@ -58,8 +58,8 @@ pageEncoding="UTF-8"%>
                       <span class="btn-background"></span>
                     </button>
                     <img
-                      src="assets/img/seungmin.jpg"
-                      style="width: 70%; right: -150px"
+                      src="assets/img/seungmin.png"
+                      style="width: 60%; right: -150px"
                       alt="Welcome"
                     />
                   </div>

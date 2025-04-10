@@ -1218,7 +1218,11 @@
     function i(t, e, i) {
       let currentSong = $(".slider--item").index($(".slider--item-center"));
 
-      if (e + 1 === 3) {
+      if (
+        e + 1 === 3 &&
+        window.location.pathname !== "/4Co4Co/index.jsp" &&
+        window.location.pathname !== "/4Co4Co/"
+      ) {
         $(".ctrlIcon").addClass("fa-pause");
         $(".ctrlIcon").removeClass("fa-play");
         $(".song")

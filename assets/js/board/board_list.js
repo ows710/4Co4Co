@@ -7,7 +7,7 @@ const prevButton = document.querySelector(".prev-page-button");
 const nextButton = document.querySelector(".next-page-button");
 let currentPage = 0;
 
-async function loadBoardData() {
+const loadBoardData = async () => {
   try {
     const response = await fetch(
       "https://gist.githubusercontent.com/dorazi0423/eda36f00b27ed2dfdc9342dba1a5c352/raw/d77662dd572448df3c9617cff3c04de97d7ea4f3/4Co4Co"
@@ -17,6 +17,10 @@ async function loadBoardData() {
     const page = document.querySelector(".pagination");
     let currentPage = 0;
     let resultData = [...data]; // 처음에는 전체 데이터를 사용
+    // 검색 처리
+    const search_input = document.querySelector(".search input");
+    const search_button = document.querySelector(".search button");
+    const search_checkBox = document.querySelector(".search select");
 
     // tr 태그 추가하는 함수
     const input = (start, end, dataToDisplay) => {
@@ -63,9 +67,15 @@ async function loadBoardData() {
       for (let i = 0; i < pageTotal; i++) {
         const li = document.createElement("li");
         li.className = "page-number-button";
-        li.innerHTML = `<a href="#" class="text-secondary ">${i + 1}</a>`;
+        li.innerHTML = `<button class="text-secondary ">${i + 1}</button>`;
+
+        if (i === 0) li.classList.add("current-page");
 
         li.addEventListener("click", () => {
+          const nowPage = document.querySelector(".current-page");
+          nowPage.classList.remove("current-page");
+          li.classList.add("current-page");
+          currentPage = i;
           pageLoad(i, dataToDisplay);
         });
 
@@ -76,10 +86,6 @@ async function loadBoardData() {
       pageLoad(0, dataToDisplay);
     };
 
-    // 검색 처리
-    const search_input = document.querySelector(".search input");
-    const search_button = document.querySelector(".search button");
-    const search_checkBox = document.querySelector(".search select");
     const search = () => {
       let filteredData = [];
 
@@ -111,12 +117,30 @@ async function loadBoardData() {
     //검색 버튼 눌렀을 때
     search_button.addEventListener("click", () => {
       search();
+      history.pushState(
+        { isSearch: true },
+        "",
+        "?search=" + search_input.value
+      );
     });
 
     //엔터 눌렀을 때 검색하기
     search_input.addEventListener("keydown", () => {
       if (event.key === "Enter") {
         search();
+        history.pushState(
+          { isSearch: true },
+          "",
+          "?search=" + search_input.value
+        );
+      }
+    });
+
+    window.addEventListener("popstate", (event) => {
+      if (!event.state || !event.state.isSearch) {
+        search_input.value = "";
+        resultData = [...data];
+        updatePagination(resultData);
       }
     });
 
@@ -126,6 +150,10 @@ async function loadBoardData() {
     // 왼쪽 버튼 눌렀을 때
     prevButton.addEventListener("click", () => {
       if (--currentPage >= 0) {
+        const nowPage = document.querySelector(".current-page");
+        const nextPage = document.querySelectorAll("li")[currentPage + 1];
+        nowPage.classList.remove("current-page");
+        nextPage.classList.add("current-page");
         pageLoad(currentPage, resultData);
       } else {
         currentPage = 0;
@@ -135,6 +163,10 @@ async function loadBoardData() {
     // 오른쪽 버튼 눌렀을 때
     nextButton.addEventListener("click", () => {
       if (++currentPage < Math.ceil(resultData.length / 10)) {
+        const nowPage = document.querySelector(".current-page");
+        const nextPage = document.querySelectorAll("li")[currentPage + 1];
+        nowPage.classList.remove("current-page");
+        nextPage.classList.add("current-page");
         pageLoad(currentPage, resultData);
       } else {
         currentPage = Math.ceil(resultData.length / 10) - 1;
@@ -143,7 +175,7 @@ async function loadBoardData() {
   } catch (error) {
     console.error("오류발생:", error);
   }
-}
+};
 
 // 페이지가 로드될 때 데이터 불러오기
 window.onload = loadBoardData;

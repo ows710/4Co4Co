@@ -3,7 +3,7 @@ pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Global</title>
+    <title>4CO4CO</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,9 +23,7 @@ pageEncoding="UTF-8"%>
             <nav class="l-side-nav">
               <ul class="side-nav">
                 <li class="is-active"><span>Home</span></li>
-                <li><span>Works</span></li>
-                <li><span>About</span></li>
-                <li><span>Contact</span></li>
+                <li><span>Chart</span></li>
                 <li><span>Kanban</span></li>
               </ul>
             </nav>
@@ -163,166 +161,27 @@ pageEncoding="UTF-8"%>
                 </div>
               </li>
               <li class="l-section section">
-                <div class="work">
-                  <h2>Selected work</h2>
-                  <div class="work--lockup">
-                    <ul class="slider">
-                      <li class="slider--item slider--item-left">
-                        <a href="#0">
-                          <div class="slider--item-image">
-                            <img
-                              src="assets/img/work-victory.jpg"
-                              alt="Victory"
-                            />
-                          </div>
-                          <p class="slider--item-title">Victory</p>
-                          <p class="slider--item-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit sed do.
-                          </p>
-                        </a>
-                      </li>
-                      <li class="slider--item slider--item-center">
-                        <a href="#0">
-                          <div class="slider--item-image">
-                            <img
-                              src="assets/img/work-metiew-smith.jpg"
-                              alt="Metiew and Smith"
-                            />
-                          </div>
-                          <p class="slider--item-title">Metiew &amp; Smith</p>
-                          <p class="slider--item-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit sed do.
-                          </p>
-                        </a>
-                      </li>
-                      <li class="slider--item slider--item-right">
-                        <a href="#0">
-                          <div class="slider--item-image">
-                            <img
-                              src="assets/img/work-alex-nowak.jpg"
-                              alt="Alex Nowak"
-                            />
-                          </div>
-                          <p class="slider--item-title">Alex Nowak</p>
-                          <p class="slider--item-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit sed do.
-                          </p>
-                        </a>
-                      </li>
-                    </ul>
-                    <div class="slider--prev">
-                      <svg
-                        version="1.1"
-                        id="Layer_1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        x="0px"
-                        y="0px"
-                        viewBox="0 0 150 118"
-                        style="enable-background: new 0 0 150 118"
-                        xml:space="preserve"
-                      >
-                        <g
-                          transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)"
-                        >
-                          <path
-                            d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
-                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
-                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                    <div class="slider--next">
-                      <svg
-                        version="1.1"
-                        id="Layer_1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        x="0px"
-                        y="0px"
-                        viewBox="0 0 150 118"
-                        style="enable-background: new 0 0 150 118"
-                        xml:space="preserve"
-                      >
-                        <g
-                          transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)"
-                        >
-                          <path
-                            d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="l-section section">
                 <div class="about">
                   <div class="about--banner">
-                    <h2>We<br />believe in<br />passionate<br />people</h2>
-                    <a href="#0"
-                      >Career
-                      <span>
-                        <svg
-                          version="1.1"
-                          id="Layer_1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          x="0px"
-                          y="0px"
-                          viewBox="0 0 150 118"
-                          style="enable-background: new 0 0 150 118"
-                          xml:space="preserve"
-                        >
-                          <g
-                            transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)"
-                          >
-                            <path
-                              d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"
-                            />
-                          </g>
-                        </svg>
-                      </span>
-                    </a>
-                    <img src="assets/img/about-visual.png" alt="About Us" />
-                  </div>
-                  <div class="about--options">
-                    <a href="#0">
-                      <h3>Winners</h3>
-                    </a>
-                    <a href="#0">
-                      <h3>Philosophy</h3>
-                    </a>
-                    <a href="#0">
-                      <h3>History</h3>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="l-section section">
-                <div class="contact">
-                  <div class="contact--lockup">
-                    <div class="modal">
-                      <div class="modal--information">
-                        <p>Pawia 5, 31-154 Kraków, Poland</p>
-                        <a href="mailto:ouremail@gmail.com"
-                          >ouremail@gmail.com</a
-                        >
-                        <a href="tel:+148126287560">+48 12 628 75 60</a>
+                    <h2 style="font-size: 50px;">역별 승하차 정보</h2>
+                    <div class="subway-select">
+                      <input class="date-select" type="date" max="2025-04-01" id="date" value="2025-02-10" />
+                      <select class="line-select" name="line" id="line">
+                        <option value="1">1호선</option>
+                        <option value="2">2호선</option>
+                        <option value="3">3호선</option>
+                        <option value="4">4호선</option>
+                        <option value="5">5호선</option>
+                        <option value="6">6호선</option>
+                        <option value="7">7호선</option>
+                        <option value="8">8호선</option>
+                        <option value="9">9호선</option>
+                      </select>
+                      <button id="search" class="search-btn">검색</button>
                       </div>
-                      <ul class="modal--options">
-                        <li><a href="#0">Bēhance</a></li>
-                        <li><a href="#0">dribbble</a></li>
-                        <li>
-                          <a href="mailto:ouremail@gmail.com">Contact Us</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                      <canvas id="myChart"></canvas>
+                    
+                   </div>
                 </div>
               </li>
               <li class="l-section section">
@@ -368,9 +227,7 @@ pageEncoding="UTF-8"%>
       </div>
       <ul class="outer-nav">
         <li class="is-active">Home</li>
-        <li>Works</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>Chart</li>
         <li>Kanban</li>
       </ul>
     </div>
@@ -384,5 +241,7 @@ pageEncoding="UTF-8"%>
     </script>
     <script src="assets/js/functions-min.js"></script>
     <script src="assets/js/kanban.js"></script>
+    <script src="assets/js/chart.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>
 </html>

@@ -5,12 +5,13 @@ pageEncoding="UTF-8"%>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4CO4CO_BOARD</title>
+    <title>4CO4CO</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="./assets/css/board.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -21,6 +22,17 @@ pageEncoding="UTF-8"%>
       id="contextPath"
       value="${pageContext.request.contextPath}"
     />
+    <div class="l-wrapper">
+      <header class="header">
+        <a class="header--logo" href="./index.jsp">
+          <img
+            src="./assets/img/4co4co_icon_2.png"
+            style="width: 50px; height: 44px"
+          />
+          <p>4CO4CO</p>
+        </a>
+      </header>
+    </div>
     <div class="container-fluid">
       <div class="board">
         <div class="menu">
@@ -60,10 +72,10 @@ pageEncoding="UTF-8"%>
         <div class="footer">
           <ul class="pagination">
             <li>
-              <a href="#" class="text-secondary prev-page-button">◀</a>
+              <button class="text-secondary prev-page-button">◀</button>
             </li>
             <li>
-              <a href="#" class="text-secondary next-page-button">▶</a>
+              <button class="text-secondary next-page-button">▶</button>
             </li>
           </ul>
           <div class="search">

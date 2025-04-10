@@ -16,6 +16,11 @@ pageEncoding="UTF-8"%>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
+    <input
+      type="hidden"
+      id="contextPath"
+      value="${pageContext.request.contextPath}"
+    />
     <div class="container-fluid">
       <div class="board">
         <div class="menu">
@@ -39,8 +44,8 @@ pageEncoding="UTF-8"%>
               name="contents"
             ></textarea>
             <div class="text_length"><span>0</span>/300</div>
-            <button type="submit" class="btn btn-light">완료</button>
           </form>
+          <button class="submit">완료</button>
         </div>
       </div>
     </div>

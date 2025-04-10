@@ -57,7 +57,7 @@ pageEncoding="UTF-8"%>
                       </svg>
                       <span class="btn-background"></span>
                     </button>
-                    <img src="assets/img/dain.jpg" alt="Welcome" width="50%" />
+                    <img src="assets/img/dain.png" alt="Welcome" width="50%" />
                   </div>
                   <div class="intro--options">
                     <a href="#0">
@@ -291,7 +291,7 @@ pageEncoding="UTF-8"%>
                     </div>
                     <label class="label">
                       N
-                      <span> : 이상적으로 생각하며 </span>
+                      <span> : 작은 것에 행복을 느끼고 </span>
                     </label>
                     <div class="progress-bar">
                       <div style="width: 61%" class="progress ns">
@@ -300,7 +300,7 @@ pageEncoding="UTF-8"%>
                     </div>
                     <label class="label">
                       F
-                      <span style="font-size: 15px"> : 감정적이고 </span>
+                      <span style="font-size: 15px"> : 감수성이 풍부하며 </span>
                     </label>
                     <div class="progress-bar">
                       <div style="width: 65%" class="progress tf">
@@ -309,7 +309,7 @@ pageEncoding="UTF-8"%>
                     </div>
                     <label class="label">
                       P
-                      <span style="font-size: 15px"> : 무계획적으로 산다 </span>
+                      <span style="font-size: 15px"> : 자유롭게 살아간다 </span>
                     </label>
                     <div class="progress-bar">
                       <div style="width: 71%" class="progress pj">
