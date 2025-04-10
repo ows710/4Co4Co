@@ -1872,14 +1872,14 @@
   
   #map {
     margin: auto;
-    margin-top: 15%;
+    margin-top: 20%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 100%;
     height: 500px;
-    
+    border-radius: 15px;
   }
   
   .map-buttons {
@@ -1996,3 +1996,28 @@
     color: white;
   }
   
+  .map-title {
+    position: absolute;    /* 🔥 맵 컨테이너 기준으로 절대 위치 */
+    top: 20px;
+    left: 20px;
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;          /* 배경 어두우니 흰색 유지 */
+    margin-top: 10%;
+    margin-left: 15%;
+  }
+
+  .nky{
+    width: 511px;
+    height: 463px;
+  }
+  
+  .map-container {
+    width: 70%;
+    margin: 0 auto; /* 가로 가운데 정렬 */
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 내부 요소 가로 가운데 정렬 */
+    justify-content: center; /* 내부 요소 세로 가운데 정렬 */
+  }

@@ -16,123 +16,10 @@ pageEncoding="UTF-8"%>
       src="https://kit.fontawesome.com/f4cec5df28.js"
       crossorigin="anonymous"
     ></script>
-    <script src="assets/js/dain.js"></script>
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9be8de46cc892ba13e3d93b26b3600ad&libraries=services"
     ></script>
-    <script defer>
-      document.querySelectorAll(".slider--item-center").length;
-      document.querySelectorAll(".slider--item");
-      let closeOverlay;
-      window.closeOverlay = function () {
-        if (customOverlay) {
-          customOverlay.setMap(null);
-        }
-      };
-      document.addEventListener("DOMContentLoaded", function () {
-        var container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
-        var options = {
-          //지도를 생성할 때 필요한 기본 옵션
-          center: new kakao.maps.LatLng(37.583883601891, 126.9999880311), //지도의 중심좌표.
-          level: 3, //지도의 레벨(확대, 축소 정도)
-        };
-        if (container) {
-          // 지도를 생성합니다
-          var map = new kakao.maps.Map(container, options);
-          var marker = new kakao.maps.Marker({
-            position: map.getCenter(), // 현재 지도 중심 위치에 마커 추가
-          });
-
-          // 지도에 마커 표시
-          marker.setMap(map);
-          var ps = new kakao.maps.services.Places(map); // 장소 검색 객체 생성
-          var infowindow = new kakao.maps.InfoWindow({
-            zIndex: 1,
-            removable: true,
-          });
-
-          // ✅ 마커 저장용 객체
-          var markers = {
-            CE7: [], // 카페 마커
-            FD6: [], // 음식점 마커
-          };
-
-          // ✅ 카테고리별 마커 표시/숨김 함수
-          window.toggleCategory = function (category) {
-            if (markers[category].length > 0) {
-              // 마커가 이미 표시된 상태 → 마커 삭제
-              markers[category].forEach((marker) => marker.setMap(null));
-              markers[category] = []; // 배열 초기화
-            } else {
-              // 마커가 없는 상태 → 장소 검색 후 마커 표시
-              ps.categorySearch(
-                category,
-                function (data, status) {
-                  if (status === kakao.maps.services.Status.OK) {
-                    data.forEach((place) => {
-                      var marker = new kakao.maps.Marker({
-                        position: new kakao.maps.LatLng(place.y, place.x),
-                        map: map,
-                      });
-
-                      customOverlay = new kakao.maps.CustomOverlay({
-                        map: null, // 처음엔 안 띄움
-                        position: null,
-                        content: null,
-                        yAnchor: 1, // 말풍선 꼬리를 없애고 아래 여백 설정
-                      });
-                      // 마커 클릭 시 장소명 표시
-                      // 마커 클릭 시 상세 정보 표시
-                      kakao.maps.event.addListener(
-                        marker,
-                        "click",
-                        function () {
-                          const name = place.place_name || "이름 없음";
-                          const address =
-                            place.road_address_name ||
-                            place.address_name ||
-                            "주소 정보 없음";
-                          const phone = place.phone
-                            ? "전화: " + place.phone
-                            : "";
-
-                          const content = document.createElement("div");
-                          content.className = "custom-infowindow";
-                          content.innerHTML = `
-        <div class="infowindow-header">
-          <button class="close-btn">×</button>
-        </div>
-        <div class="infowindow-body">
-          <strong>${name}</strong><br/>
-          ${address}<br/>
-          ${phone ? phone + "<br/>" : ""}
-          <a href="${place.place_url}" target="_blank">상세보기</a>
-        </div>
-    `;
-
-                          content
-                            .querySelector(".close-btn")
-                            .addEventListener("click", function () {
-                              customOverlay.setMap(null);
-                            });
-
-                          customOverlay.setContent(content);
-                          customOverlay.setPosition(marker.getPosition());
-                          customOverlay.setMap(map);
-                        }
-                      );
-                      markers[category].push(marker); // 마커 저장
-                    });
-                  }
-                },
-                { useMapBounds: true }
-              );
-            }
-          };
-        }
-      });
-    </script>
   </head>
   <body>
     <div class="perspective effect-rotate-left">
@@ -147,8 +34,9 @@ pageEncoding="UTF-8"%>
                 <div class="intro">
                   <div class="intro--banner">
                     <h1>Developer<br />Nam KiYun</h1>
-                    <button class="cta">
-                      Hire Us
+                    <button class="cta" 
+                    onclick="location.href='https://github.com/nam-kiyun'">
+                      GITHUB
                       <svg
                         version="1.1"
                         id="Layer_1"
@@ -171,27 +59,26 @@ pageEncoding="UTF-8"%>
                       <span class="btn-background"></span>
                     </button>
                     <img
-                      src="assets/img/introduction-visual.png"
+                      src="assets/img/nky.png"
                       alt="Welcome"
+                      class="nky"
                     />
                   </div>
                   <div class="intro--options">
                     <a href="#0">
-                      <h3>제주대학교</h3>
-                      <p>컴퓨터공학전공</p>
+                      <h3>UNIV & MAJOR</h3>
+                      <p>제주대학교 컴퓨터공학전공</p>
                     </a>
                     <a href="#0">
-                      <h3>Fantasy interactive</h3>
+                      <h3>AGE</h3>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                        sed do.
+                        27
                       </p>
                     </a>
                     <a href="#0">
-                      <h3>Paul &amp; shark</h3>
+                      <h3>EMAIL</h3>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                        sed do.
+                        fordnam1@gmail.com
                       </p>
                     </a>
                   </div>
@@ -471,7 +358,7 @@ pageEncoding="UTF-8"%>
                   <div style="margin-top: 35px">
                     <label class="label">
                       I
-                      <span> : 밖에 나가는 것을 좋아하고 </span>
+                      <span> : 혼자 있는 시간이 편하고 </span>
                     </label>
                     <div class="progress-bar">
                       <div style="width: 54%" class="progress ei">
@@ -480,7 +367,7 @@ pageEncoding="UTF-8"%>
                     </div>
                     <label class="label">
                       S
-                      <span> : 직관적으로 생각하며 </span>
+                      <span> : 현실적이며 </span>
                     </label>
                     <div class="progress-bar">
                       <div style="width: 54%" class="progress ns">
@@ -490,7 +377,7 @@ pageEncoding="UTF-8"%>
                     <label class="label">
                       F
                       <span style="font-size: 15px">
-                        : 이성적으로 판단하면서
+                        : 관계를 중시하고
                       </span>
                     </label>
                     <div class="progress-bar">
@@ -501,7 +388,7 @@ pageEncoding="UTF-8"%>
                     <label class="label">
                       P
                       <span style="font-size: 15px">
-                        : 즉흥적으로 살아갑니다
+                        : 그때그때 상황에 맞게 행동한다
                       </span>
                     </label>
                     <div class="progress-bar">
@@ -514,14 +401,16 @@ pageEncoding="UTF-8"%>
               </li>
               <!-- 5번째 -->
               <li class="l-section section">
-                <div class="map">
-                  <h2>Map</h2>
+                <div class="map-container">
+                  <h2 class="map-title">Map</h2>
                   <div class="map-map" id="map"></div>
                   <div class="map-buttons">
                     <button onclick="toggleCategory('CE7')">카페</button>
                     <button onclick="toggleCategory('FD6')">음식점</button>
+                    <button id="set-destination-btn">도착지 설정</button>
                   </div>
                 </div>
+                
               </li>
             </ul>
           </div>
@@ -538,5 +427,7 @@ pageEncoding="UTF-8"%>
         );
     </script>
     <script src="assets/js/functions-min.js"></script>
+    <script src="assets/js/dain.js"></script>
+    <script src="./assets/js/map.js"></script>
   </body>
 </html>
