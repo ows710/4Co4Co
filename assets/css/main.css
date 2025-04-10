@@ -438,12 +438,12 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  text-decoration: none;
+  text-decoration: none !important;
   color: #fff;
 }
 .header--logo p {
   margin: 0 0 0 10px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
 }
