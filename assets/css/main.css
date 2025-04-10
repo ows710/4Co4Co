@@ -468,7 +468,32 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
+  float: right !important;
 }
+
+.header--register {
+  float: right !important;
+  text-decoration: none;
+  background: none;
+  outline: none;
+}
+
+.header--register > p {
+  color: white;
+}
+
+.header--board {
+  float: right !important;
+  margin-right: 10px;
+  text-decoration: none;
+  background: none;
+  outline: none;
+}
+
+.header--board > p {
+  color: white;
+}
+
 .header--nav-toggle span,
 .header--nav-toggle::before,
 .header--nav-toggle::after {
