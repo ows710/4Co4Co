@@ -39,8 +39,16 @@ const makeChart = (labels, on, off) => {
     },
     options: {
       scales: {
+        x: {
+          ticks: {
+            color: "#ccc",
+          },
+        },
         y: {
           beginAtZero: true,
+          ticks: {
+            color: "#ccc",
+          },
         },
       },
       responsive: true,
