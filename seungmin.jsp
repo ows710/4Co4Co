@@ -59,7 +59,7 @@ pageEncoding="UTF-8"%>
                     </button>
                     <img
                       src="assets/img/seungmin.png"
-                      style="width: 70%; right: -150px"
+                      style="width: 60%; right: -150px"
                       alt="Welcome"
                     />
                   </div>
