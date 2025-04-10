@@ -11,6 +11,7 @@ pageEncoding="UTF-8"%>
     <meta name="keywords" content="global, template, html, sass, jquery" />
     <meta name="author" content="Bucky Maler" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" type="image/png" href="assets/img/4co4co_icon_2.png">
   </head>
   <body>
     <div class="perspective effect-rotate-left">
@@ -136,8 +137,9 @@ pageEncoding="UTF-8"%>
                       </a>
                     </div>
                     <img
-                      src="assets/img/introduction-visual.png"
+                      src="assets/img/4co4co_black.png"
                       alt="Welcome"
+                      style="width: 511px; height: 463px;"
                     />
                   </div>
                   <div class="intro--options">
