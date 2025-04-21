@@ -340,7 +340,7 @@ pageEncoding="UTF-8"%>
                             장범준
                           </p>
                           <audio class="slider--item-description song">
-                            <source src="assets/audio/b.mp3" />
+                            <source src="assets/mp3/b.mp3" />
                           </audio>
                         </a>
                       </li>
@@ -357,7 +357,7 @@ pageEncoding="UTF-8"%>
                           <p class="slider--item-title">나는 나비</p>
                           <p class="slider--item-description">윤도현</p>
                           <audio class="slider--item-description song">
-                            <source src="assets/audio/c.mp3" />
+                            <source src="assets/mp3/c.mp3" />
                           </audio>
                         </a>
                       </li>
