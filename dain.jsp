@@ -3,7 +3,7 @@ pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>GUKDAIN</title>
+    <title>4CO4CO</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,6 +12,7 @@ pageEncoding="UTF-8"%>
     <meta name="author" content="Bucky Maler" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/dain.css" />
+    <link rel="icon" type="image/png" href="assets/img/4co4co_icon_2.png">
     <script
       src="https://kit.fontawesome.com/f4cec5df28.js"
       crossorigin="anonymous"

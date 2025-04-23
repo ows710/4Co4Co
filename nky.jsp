@@ -3,7 +3,7 @@ pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Global</title>
+    <title>4CO4CO</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,7 +14,7 @@ pageEncoding="UTF-8"%>
     <link rel="stylesheet" href="assets/css/dain.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
-
+    <link rel="icon" type="image/png" href="assets/img/4co4co_icon_2.png">
     <script
       src="https://kit.fontawesome.com/f4cec5df28.js"
       crossorigin="anonymous"

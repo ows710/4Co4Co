@@ -18,8 +18,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>회원가입</title>
+    <title>4CO4CO</title>
     <link rel="stylesheet" href="assets/css/register.css" />
+    <link rel="icon" type="image/png" href="assets/img/4co4co_icon_2.png">
 </head>
 <body>
     <div class="form-container">
